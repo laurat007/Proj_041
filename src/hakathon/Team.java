@@ -1,13 +1,14 @@
+package hakathon;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hakathon;
 
 /**
  *
- * @author florence
+ * @author laura
  */
 public class Team {
     double primarySkill = 0;
@@ -17,10 +18,21 @@ public class Team {
     double teamVelocity = 0;
     Member[] chosenMembers;
     int teamSize = 0;
+    Events event = new Events();
     
     void addMember( Member x) {
         chosenMembers[++teamSize] = x;
-        teamVelocity += chosenMembers[teamSize].velocity;
+    }
+    
+    void getVelocity() {
+        for(int i = 0; i < teamSize; i++)
+            teamVelocity += chosenMembers[i].velocity;
+        event.sizePenalty(this);
+        
+    }
+    
+    double estimateWeekComplet(int backlogSize) {
+        return backlogSize / teamVelocity;
     }
     
     void getPrimarySkill() {
@@ -36,6 +48,8 @@ public class Team {
         }
         secondarySkill = (1 * secondarySkill / 3 * teamSize) * 100;
     }
+    
+    
     
     
 }

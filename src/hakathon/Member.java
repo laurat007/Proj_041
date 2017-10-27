@@ -1,13 +1,17 @@
+package hakathon;
+
+
+import java.util.Hashtable;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hakathon;
 
 /**
  *
- * @author florence
+ * @author laura
  */
 public class Member {
     String name;
