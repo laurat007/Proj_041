@@ -24,13 +24,24 @@ public class Team {
     void addMember( Member x, int index) {
         chosenMembers[index + 1] = x;
         teamVelocity += chosenMembers[index + 1].velocity;
+        if (index == teamSize) {
+            getPrimarySkill();
+            getSecondarySkill();
+        }
     }
     
-    int getPrimarySkill() {
+    void getPrimarySkill() {
         for( int index = 0; index < teamSize; index++) {
             primarySkill += chosenMembers[index].primarySkill;
         }
-        primarySkill
+        primarySkill = (2 * primarySkill / 3 * teamSize) * 100;
+    }
+    
+    void getSecondarySkill() {
+        for( int index = 0; index < teamSize; index++) {
+            secondarySkill += chosenMembers[index].secondarySkill;
+        }
+        secondarySkill = (1 * secondarySkill / 3 * teamSize) * 100;
     }
     
     
