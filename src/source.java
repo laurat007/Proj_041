@@ -13,6 +13,7 @@ import java.util.Hashtable;
  */
 public class source {
     public static void main(String arg[]) {
+        Team t = new Team();
         Hashtable ability = new Hashtable();
         ability.put("FRONTEND", 1);
         ability.put("BACKEND", 2);
