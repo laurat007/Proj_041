@@ -10,6 +10,13 @@
  */
 public class Events {
     
+    Team t;
+    
+    Events(Team t) { 
+        this.t = t;
+    }
+    
+    
     void genderPenalty(Team t) {
         int count = 0;
         for(int i = 0; i < t.teamSize; i++) {

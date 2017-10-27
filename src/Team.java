@@ -19,7 +19,15 @@ public class Team {
     
     void addMember( Member x) {
         chosenMembers[++teamSize] = x;
-        teamVelocity += chosenMembers[teamSize].velocity;
+    }
+    
+    void getVelocity() {
+        for(int i = 0; i < teamSize; i++)
+            teamVelocity += chosenMembers[i].velocity;
+    }
+    
+    double estimateWeekComplet(int backlogSize) {
+        return backlogSize / teamVelocity;
     }
     
     void getPrimarySkill() {
