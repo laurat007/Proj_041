@@ -9,10 +9,31 @@
  * @author laura
  */
 public class Team {
-    double primarySkill;
-    double secondarySkill;
+    double primarySkill = 0;
+    double secondarySkill = 0;
     double genderMix;
-    int teamVelocity;
+    double teamSatisfaction;
+    int teamVelocity = 0;
+    Member[] chosenMembers;
+    int teamSize;
+    
+    Team(int n) {
+        teamSize = n;
+    }
+    
+    void addMember( Member x, int index) {
+        chosenMembers[index + 1] = x;
+        teamVelocity += chosenMembers[index + 1].velocity;
+    }
+    
+    int getPrimarySkill() {
+        for( int index = 0; index < teamSize; index++) {
+            primarySkill += chosenMembers[index].primarySkill;
+        }
+        primarySkill
+    }
+    
+    
     
     
 }
