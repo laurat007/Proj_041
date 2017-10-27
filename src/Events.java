@@ -10,12 +10,42 @@
  */
 public class Events {
     
-    Team t;
-    
-    Events(Team t) { 
-        this.t = t;
+    void sprintPlanningEvents(Team t, double customerSatisfaction,int question, int response) {
+        switch(question) {
+            case 1:
+                switch(response) {
+                    case 1:
+                        break;
+                    case 2:
+                        customerSatisfaction *= 0.97;
+                        break;
+                    case 3:
+                        t.teamSatisfaction *= 0.97;
+                        customerSatisfaction *= 0.97;
+                        break;
+                }
+                break;
+        }
     }
     
+    void dailyScrumUnexpectedEvents(Team t, double customerSatisfaction,int question, int response) {
+        switch(question) {
+            case 1:
+                switch(response) {
+                    case 1:
+                        t.teamSatisfaction *= 1.02;
+                        break;
+                    case 2:
+                        t.teamSatisfaction *= 0.98;
+                        t.teamVelocity *= 0.95;
+                        break;
+                    case 3:
+                        t.teamVelocity *= 0.95;
+                        break;
+                }
+                break;
+        }
+    }
     
     void genderPenalty(Team t) {
         int count = 0;

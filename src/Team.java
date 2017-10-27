@@ -16,6 +16,7 @@ public class Team {
     double teamVelocity = 0;
     Member[] chosenMembers;
     int teamSize = 0;
+    Events event = new Events();
     
     void addMember( Member x) {
         chosenMembers[++teamSize] = x;
@@ -24,6 +25,8 @@ public class Team {
     void getVelocity() {
         for(int i = 0; i < teamSize; i++)
             teamVelocity += chosenMembers[i].velocity;
+        event.sizePenalty(this);
+        
     }
     
     double estimateWeekComplet(int backlogSize) {
