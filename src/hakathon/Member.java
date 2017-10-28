@@ -16,21 +16,33 @@ import java.util.Hashtable;
 public class Member {
     String name;
     int gender;
-    int velocity = (int)(Math.random() * 10);
-    double motivationLevel = (int)(Math.random() * 100);
+    int velocity;
+    double motivationLevel = getRandomInteger(50, 90);
     int primarySkill;
     int secondarySkill;
+    String sprimarySkill;
+    String ssecondarySkill;
     
-    Member(String givenName, int gen, int primS, int secS) {
-        if(velocity > 5)
-            velocity -= 4;
-        if(motivationLevel < 50)
-            motivationLevel += 50;
+     public static int getRandomInteger(int maximum, int minimum)
+        { 
+            return ((int) (Math.random()*(maximum - minimum))) + minimum; }
+    
+    Member(String givenName, int gen, int primS, int secS, int velocity) {
         name = givenName;
         gender = gen;
         primarySkill = primS;
         secondarySkill = secS;
+        this.velocity = velocity;
     }
+    
+    Member(String givenName, int gen, String primS, String secS, int velocity) {
+        name = givenName;
+        gender = gen;
+        sprimarySkill = primS;
+        ssecondarySkill = secS;
+        this.velocity = velocity;
+    }
+    
     
     
     

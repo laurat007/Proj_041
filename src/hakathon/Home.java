@@ -68,6 +68,7 @@ public class Home extends javax.swing.JFrame {
         setVisible(false);
         Story story = new Story();
         story.setVisible(true);
+        
         Project p1 = new Project();
         Project p2 = new Project();
         Project p3 = new Project();

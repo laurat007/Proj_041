@@ -26,7 +26,7 @@ public class source {
         String[] girlsName = {"ANA", "MARIA", "CORNELUSA", "BRANDUSA"};
         String[] boysName = {"MIKE", "TAYSON", "JOHN", "ROBY"};
         
-        for(int i = 0; i < 5; i++) {
+        for(int i = 0; i < 4; i++) {
             Random r = new Random();
             int p = r.nextInt(4);
             int s = r.nextInt(4);
@@ -34,6 +34,16 @@ public class source {
                 s = r.nextInt(4);
             allOptions[i] = new Member(girlsName[i], 1, p - 1, s -1);
         }
+        
+         for(int i = 4; i < 8; i++) {
+            Random r = new Random();
+            int p = r.nextInt(4);
+            int s = r.nextInt(4);
+            while(s != p)
+                s = r.nextInt(4);
+            allOptions[i] = new Member(girlsName[i], 0, p - 1, s -1);
+        }
+        
         
         
     }

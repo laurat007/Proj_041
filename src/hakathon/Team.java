@@ -14,20 +14,27 @@ public class Team {
     double primarySkill = 0;
     double secondarySkill = 0;
     double genderMix;
-    double teamSatisfaction;
+    double teamSatisfaction = 100;
     double teamVelocity = 0;
-    Member[] chosenMembers;
+    double teamMotivation;
+    Member[] chosenMembers = new Member[8];
     int teamSize = 0;
     Events event = new Events();
     
+    void getMotivation(){
+        for(int i = 0; i < teamSize; i++)
+            teamMotivation += chosenMembers[i].motivationLevel;
+        teamMotivation = teamMotivation/teamSize;
+        
+    }
     void addMember( Member x) {
-        chosenMembers[++teamSize] = x;
+        chosenMembers[teamSize] = x;
+        teamSize++;
     }
     
     void getVelocity() {
         for(int i = 0; i < teamSize; i++)
             teamVelocity += chosenMembers[i].velocity;
-        event.sizePenalty(this);
         
     }
     
@@ -48,8 +55,6 @@ public class Team {
         }
         secondarySkill = (1 * secondarySkill / 3 * teamSize) * 100;
     }
-    
-    
-    
+
     
 }

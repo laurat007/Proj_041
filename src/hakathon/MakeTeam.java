@@ -5,6 +5,8 @@
  */
 package hakathon;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author florence
@@ -17,6 +19,8 @@ public class MakeTeam extends javax.swing.JFrame {
     public MakeTeam() {
         initComponents();
     }
+    Team team = new Team();
+    Events evenimente = new Events();
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,6 +40,7 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill1 = new javax.swing.JTextField();
         sskill1 = new javax.swing.JTextField();
         vel1 = new javax.swing.JTextField();
+        add1 = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         nume2 = new javax.swing.JTextField();
         ps2 = new javax.swing.JLabel();
@@ -44,6 +49,7 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill2 = new javax.swing.JTextField();
         sskill2 = new javax.swing.JTextField();
         vel2 = new javax.swing.JTextField();
+        add6 = new javax.swing.JCheckBox();
         jPanel3 = new javax.swing.JPanel();
         nume3 = new javax.swing.JTextField();
         ps3 = new javax.swing.JLabel();
@@ -52,6 +58,7 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill3 = new javax.swing.JTextField();
         sskill3 = new javax.swing.JTextField();
         vel3 = new javax.swing.JTextField();
+        add5 = new javax.swing.JCheckBox();
         jPanel4 = new javax.swing.JPanel();
         nume4 = new javax.swing.JTextField();
         ps4 = new javax.swing.JLabel();
@@ -60,6 +67,7 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill4 = new javax.swing.JTextField();
         sskill4 = new javax.swing.JTextField();
         vel4 = new javax.swing.JTextField();
+        add7 = new javax.swing.JCheckBox();
         jPanel5 = new javax.swing.JPanel();
         nume5 = new javax.swing.JTextField();
         ps5 = new javax.swing.JLabel();
@@ -68,6 +76,7 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill5 = new javax.swing.JTextField();
         sskill5 = new javax.swing.JTextField();
         vel5 = new javax.swing.JTextField();
+        add8 = new javax.swing.JCheckBox();
         jPanel6 = new javax.swing.JPanel();
         nume6 = new javax.swing.JTextField();
         ps6 = new javax.swing.JLabel();
@@ -76,6 +85,7 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill6 = new javax.swing.JTextField();
         sskill6 = new javax.swing.JTextField();
         vel6 = new javax.swing.JTextField();
+        add2 = new javax.swing.JCheckBox();
         jPanel7 = new javax.swing.JPanel();
         nume7 = new javax.swing.JTextField();
         ps7 = new javax.swing.JLabel();
@@ -84,6 +94,7 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill7 = new javax.swing.JTextField();
         sskill7 = new javax.swing.JTextField();
         vel7 = new javax.swing.JTextField();
+        add3 = new javax.swing.JCheckBox();
         jPanel8 = new javax.swing.JPanel();
         nume8 = new javax.swing.JTextField();
         ps8 = new javax.swing.JLabel();
@@ -92,6 +103,8 @@ public class MakeTeam extends javax.swing.JFrame {
         pskill8 = new javax.swing.JTextField();
         sskill8 = new javax.swing.JTextField();
         vel8 = new javax.swing.JTextField();
+        add4 = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1500, 750));
@@ -107,6 +120,13 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v1.setText("Velocity/week");
 
+        add1.setText("Add in team");
+        add1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -114,25 +134,27 @@ public class MakeTeam extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ps1)
-                            .addComponent(sk1)
-                            .addComponent(v1))
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pskill1)
-                            .addComponent(sskill1)
-                            .addComponent(vel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
+                    .addComponent(ps1)
+                    .addComponent(sk1)
+                    .addComponent(v1)
+                    .addComponent(nume1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(add1)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(pskill1)
+                        .addComponent(sskill1)
+                        .addComponent(vel1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add1))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps1)
                     .addComponent(pskill1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -149,6 +171,12 @@ public class MakeTeam extends javax.swing.JFrame {
 
         jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 102, 204), 2, true));
 
+        nume2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nume2ActionPerformed(evt);
+            }
+        });
+
         ps2.setText("Primary Skill");
         ps2.setToolTipText("");
 
@@ -156,14 +184,24 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v2.setText("Velocity/week");
 
+        add6.setText("Add in team");
+        add6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add6ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(nume2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(add6))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ps2)
@@ -179,9 +217,11 @@ public class MakeTeam extends javax.swing.JFrame {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add6))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps2)
                     .addComponent(pskill2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -205,6 +245,13 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v3.setText("Velocity/week");
 
+        add5.setText("Add in team");
+        add5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add5ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -212,25 +259,27 @@ public class MakeTeam extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ps3)
-                            .addComponent(sk3)
-                            .addComponent(v3))
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pskill3)
-                            .addComponent(sskill3)
-                            .addComponent(vel3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
+                    .addComponent(ps3)
+                    .addComponent(sk3)
+                    .addComponent(v3)
+                    .addComponent(nume3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(add5)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(pskill3)
+                        .addComponent(sskill3)
+                        .addComponent(vel3, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add5))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps3)
                     .addComponent(pskill3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -254,14 +303,24 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v4.setText("Velocity/week");
 
+        add7.setText("Add in team");
+        add7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add7ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(nume4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(add7))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ps4)
@@ -277,9 +336,11 @@ public class MakeTeam extends javax.swing.JFrame {
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add7))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps4)
                     .addComponent(pskill4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -303,14 +364,24 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v5.setText("Velocity/week");
 
+        add8.setText("Add in team");
+        add8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add8ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(nume5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(add8))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ps5)
@@ -326,9 +397,11 @@ public class MakeTeam extends javax.swing.JFrame {
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add8))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps5)
                     .addComponent(pskill5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -352,14 +425,24 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v6.setText("Velocity/week");
 
+        add2.setText("Add in team");
+        add2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(nume6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(add2))
                     .addGroup(jPanel6Layout.createSequentialGroup()
                         .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ps6)
@@ -375,9 +458,11 @@ public class MakeTeam extends javax.swing.JFrame {
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add2))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps6)
                     .addComponent(pskill6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -401,14 +486,30 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v7.setText("Velocity/week");
 
+        sskill7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sskill7ActionPerformed(evt);
+            }
+        });
+
+        add3.setText("Add in team");
+        add3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(nume7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
+                        .addComponent(add3))
                     .addGroup(jPanel7Layout.createSequentialGroup()
                         .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(ps7)
@@ -424,9 +525,11 @@ public class MakeTeam extends javax.swing.JFrame {
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add3))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps7)
                     .addComponent(pskill7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -450,6 +553,13 @@ public class MakeTeam extends javax.swing.JFrame {
 
         v8.setText("Velocity/week");
 
+        add4.setText("Add in team");
+        add4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                add4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
@@ -457,25 +567,27 @@ public class MakeTeam extends javax.swing.JFrame {
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(nume8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel8Layout.createSequentialGroup()
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(ps8)
-                            .addComponent(sk8)
-                            .addComponent(v8))
-                        .addGap(50, 50, 50)
-                        .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(pskill8)
-                            .addComponent(sskill8)
-                            .addComponent(vel8, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE))))
+                    .addComponent(ps8)
+                    .addComponent(sk8)
+                    .addComponent(v8)
+                    .addComponent(nume8, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(add4)
+                    .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(pskill8)
+                        .addComponent(sskill8)
+                        .addComponent(vel8, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(nume8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addGap(20, 20, 20)
+                .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(nume8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(add4))
+                .addGap(26, 26, 26)
                 .addGroup(jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(ps8)
                     .addComponent(pskill8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -489,6 +601,13 @@ public class MakeTeam extends javax.swing.JFrame {
                     .addComponent(vel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(18, Short.MAX_VALUE))
         );
+
+        jButton1.setText("DONE");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -515,8 +634,11 @@ public class MakeTeam extends javax.swing.JFrame {
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(163, Short.MAX_VALUE))
+                            .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(628, 628, 628)
+                        .addComponent(jButton1)))
+                .addContainerGap(157, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -535,11 +657,76 @@ public class MakeTeam extends javax.swing.JFrame {
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(603, Short.MAX_VALUE))
+                .addGap(52, 52, 52)
+                .addComponent(jButton1)
+                .addContainerGap(528, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void sskill7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sskill7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sskill7ActionPerformed
+
+    private void nume2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nume2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_nume2ActionPerformed
+
+    private void add1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add1ActionPerformed
+        // TODO add your handling code here:
+        team.addMember(new Member(nume1.getText(), 1, pskill1.getText(), sskill1.getText(), Integer.parseInt(vel1.getText())));
+             
+    }//GEN-LAST:event_add1ActionPerformed
+
+    private void add2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add2ActionPerformed
+        team.addMember(new Member(nume6.getText(), 0, pskill6.getText(), sskill6.getText(), Integer.parseInt(vel6.getText())));        // TODO add your handling code here:
+    }//GEN-LAST:event_add2ActionPerformed
+
+    private void add3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add3ActionPerformed
+        team.addMember(new Member(nume7.getText(), 0, pskill7.getText(), sskill7.getText(), Integer.parseInt(vel7.getText())));// TODO add your handling code here:
+    }//GEN-LAST:event_add3ActionPerformed
+
+    private void add4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add4ActionPerformed
+       team.addMember(new Member(nume8.getText(), 1, pskill8.getText(), sskill8.getText(), Integer.parseInt(vel8.getText()))); // TODO add your handling code here:
+    }//GEN-LAST:event_add4ActionPerformed
+
+    private void add5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add5ActionPerformed
+        team.addMember(new Member(nume3.getText(), 1, pskill3.getText(), sskill3.getText(), Integer.parseInt(vel3.getText())));// TODO add your handling code here:
+    }//GEN-LAST:event_add5ActionPerformed
+
+    private void add6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add6ActionPerformed
+        // TODO add your handling code here:
+        team.addMember(new Member(nume2.getText(), 1, pskill2.getText(), sskill2.getText(), Integer.parseInt(vel2.getText())));
+    }//GEN-LAST:event_add6ActionPerformed
+
+    private void add7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add7ActionPerformed
+        // TODO add your handling code here:
+        team.addMember(new Member(nume4.getText(), 0, pskill4.getText(), sskill4.getText(), Integer.parseInt(vel4.getText())));
+    }//GEN-LAST:event_add7ActionPerformed
+
+    private void add8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_add8ActionPerformed
+        // TODO add your handling code here:
+        team.addMember(new Member(nume5.getText(), 1, pskill5.getText(), sskill5.getText(), Integer.parseInt(vel5.getText())));
+    }//GEN-LAST:event_add8ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        team.getVelocity();
+        team.getPrimarySkill();
+        team.getSecondarySkill();
+ 
+        if(evenimente.genderPenalty(team))
+             JOptionPane.showMessageDialog(null, " You've just received a gender penalty!","Warning!", JOptionPane.INFORMATION_MESSAGE);
+        if(evenimente.sizePenalty(team))
+             JOptionPane.showMessageDialog(null, "You've just selected too many members!","Warning!", JOptionPane.INFORMATION_MESSAGE);        
+    
+        setVisible(false);
+       Sprint1_2 rp = new Sprint1_2(team);
+       rp.setVisible(true);
+        
+ 
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -577,6 +764,15 @@ public class MakeTeam extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JCheckBox add1;
+    private javax.swing.JCheckBox add2;
+    private javax.swing.JCheckBox add3;
+    private javax.swing.JCheckBox add4;
+    private javax.swing.JCheckBox add5;
+    private javax.swing.JCheckBox add6;
+    private javax.swing.JCheckBox add7;
+    private javax.swing.JCheckBox add8;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -586,14 +782,14 @@ public class MakeTeam extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JTextField nume1;
-    private javax.swing.JTextField nume2;
-    private javax.swing.JTextField nume3;
-    private javax.swing.JTextField nume4;
-    private javax.swing.JTextField nume5;
-    private javax.swing.JTextField nume6;
-    private javax.swing.JTextField nume7;
-    private javax.swing.JTextField nume8;
+    public static javax.swing.JTextField nume1;
+    public static javax.swing.JTextField nume2;
+    public static javax.swing.JTextField nume3;
+    public static javax.swing.JTextField nume4;
+    public static javax.swing.JTextField nume5;
+    public static javax.swing.JTextField nume6;
+    public static javax.swing.JTextField nume7;
+    public static javax.swing.JTextField nume8;
     private javax.swing.JLabel ps1;
     private javax.swing.JLabel ps2;
     private javax.swing.JLabel ps3;
@@ -602,14 +798,14 @@ public class MakeTeam extends javax.swing.JFrame {
     private javax.swing.JLabel ps6;
     private javax.swing.JLabel ps7;
     private javax.swing.JLabel ps8;
-    private javax.swing.JTextField pskill1;
-    private javax.swing.JTextField pskill2;
-    private javax.swing.JTextField pskill3;
-    private javax.swing.JTextField pskill4;
-    private javax.swing.JTextField pskill5;
-    private javax.swing.JTextField pskill6;
-    private javax.swing.JTextField pskill7;
-    private javax.swing.JTextField pskill8;
+    public static javax.swing.JTextField pskill1;
+    public static javax.swing.JTextField pskill2;
+    public static javax.swing.JTextField pskill3;
+    public static javax.swing.JTextField pskill4;
+    public static javax.swing.JTextField pskill5;
+    public static javax.swing.JTextField pskill6;
+    public static javax.swing.JTextField pskill7;
+    public static javax.swing.JTextField pskill8;
     private javax.swing.JLabel sk1;
     private javax.swing.JLabel sk2;
     private javax.swing.JLabel sk3;
@@ -618,14 +814,14 @@ public class MakeTeam extends javax.swing.JFrame {
     private javax.swing.JLabel sk6;
     private javax.swing.JLabel sk7;
     private javax.swing.JLabel sk8;
-    private javax.swing.JTextField sskill1;
-    private javax.swing.JTextField sskill2;
-    private javax.swing.JTextField sskill3;
-    private javax.swing.JTextField sskill4;
-    private javax.swing.JTextField sskill5;
-    private javax.swing.JTextField sskill6;
-    private javax.swing.JTextField sskill7;
-    private javax.swing.JTextField sskill8;
+    public static javax.swing.JTextField sskill1;
+    public static javax.swing.JTextField sskill2;
+    public static javax.swing.JTextField sskill3;
+    public static javax.swing.JTextField sskill4;
+    public static javax.swing.JTextField sskill5;
+    public static javax.swing.JTextField sskill6;
+    public static javax.swing.JTextField sskill7;
+    public static javax.swing.JTextField sskill8;
     private javax.swing.JLabel v1;
     private javax.swing.JLabel v2;
     private javax.swing.JLabel v3;
@@ -634,13 +830,13 @@ public class MakeTeam extends javax.swing.JFrame {
     private javax.swing.JLabel v6;
     private javax.swing.JLabel v7;
     private javax.swing.JLabel v8;
-    private javax.swing.JTextField vel1;
-    private javax.swing.JTextField vel2;
-    private javax.swing.JTextField vel3;
-    private javax.swing.JTextField vel4;
-    private javax.swing.JTextField vel5;
-    private javax.swing.JTextField vel6;
-    private javax.swing.JTextField vel7;
-    private javax.swing.JTextField vel8;
+    public static javax.swing.JTextField vel1;
+    public static javax.swing.JTextField vel2;
+    public static javax.swing.JTextField vel3;
+    public static javax.swing.JTextField vel4;
+    public static javax.swing.JTextField vel5;
+    public static javax.swing.JTextField vel6;
+    public static javax.swing.JTextField vel7;
+    public static javax.swing.JTextField vel8;
     // End of variables declaration//GEN-END:variables
 }

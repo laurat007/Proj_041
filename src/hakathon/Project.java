@@ -30,7 +30,8 @@ public class Project {
     public final int storyPoints = getRandomInteger(300, 500);
     public final int weeksExpectedCompletion = getRandomInteger(8, 15);
     public final int initialCustomerSatisfation = getRandomInteger(50, 90);
-    public final int initialProjectBudget = getRandomInteger(500, 1000);
+    public int initialProjectBudget = getRandomInteger(500, 1000);
+    public double backlog = 100; 
     
     
     
