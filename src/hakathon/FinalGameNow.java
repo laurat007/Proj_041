@@ -33,6 +33,8 @@ public class FinalGameNow extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1500, 750));
+        setMinimumSize(new java.awt.Dimension(1500, 750));
         getContentPane().setLayout(null);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/if_grave_744558.png"))); // NOI18N

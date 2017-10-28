@@ -55,25 +55,28 @@ public class Story extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(997, 566));
+        setMinimumSize(new java.awt.Dimension(997, 566));
+        setPreferredSize(new java.awt.Dimension(997, 566));
         getContentPane().setLayout(null);
 
-        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Project No 1");
         getContentPane().add(jLabel2);
-        jLabel2.setBounds(40, 130, 90, 20);
+        jLabel2.setBounds(40, 130, 140, 20);
 
-        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Project No 2");
         getContentPane().add(jLabel3);
-        jLabel3.setBounds(370, 140, 81, 18);
+        jLabel3.setBounds(370, 140, 160, 21);
 
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Project No 3");
         getContentPane().add(jLabel4);
-        jLabel4.setBounds(780, 140, 100, 18);
+        jLabel4.setBounds(780, 140, 140, 21);
 
         jLabel6.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,6 +159,11 @@ public class Story extends javax.swing.JFrame {
         button1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         button1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/if_General_Office_38_2530790.png"))); // NOI18N
         button1.setText("CHOOSE No.1");
+        button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                button1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(button1);
         button1.setBounds(40, 450, 180, 30);
 
@@ -174,14 +182,22 @@ public class Story extends javax.swing.JFrame {
         jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/if_General_Office_48_2530806.png"))); // NOI18N
         jButton1.setText("CHOOSE No.3");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1);
         jButton1.setBounds(780, 450, 190, 29);
 
         d.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
         d.setForeground(new java.awt.Color(255, 255, 255));
         d.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/choose1.jpg"))); // NOI18N
+        d.setMaximumSize(new java.awt.Dimension(1500, 750));
+        d.setMinimumSize(new java.awt.Dimension(1500, 750));
+        d.setPreferredSize(new java.awt.Dimension(1500, 750));
         getContentPane().add(d);
-        d.setBounds(0, 0, 1001, 570);
+        d.setBounds(0, 0, 1500, 570);
 
         jLabel5.setText("jLabel5");
         getContentPane().add(jLabel5);
@@ -201,6 +217,20 @@ public class Story extends javax.swing.JFrame {
         ComposeProject cp = new ComposeProject();
         cp.setVisible(true);
     }//GEN-LAST:event_button2ActionPerformed
+
+    private void button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_button1ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        ComposeProject cp = new ComposeProject();
+        cp.setVisible(true);
+    }//GEN-LAST:event_button1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        ComposeProject cp = new ComposeProject();
+        cp.setVisible(true);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

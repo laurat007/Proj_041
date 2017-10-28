@@ -31,28 +31,31 @@ public class Home extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1500, 750));
+        setMinimumSize(new java.awt.Dimension(1500, 750));
+        setPreferredSize(new java.awt.Dimension(1500, 750));
         getContentPane().setLayout(null);
 
-        jButton1.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
+        jButton1.setFont(new java.awt.Font("Segoe Print", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(51, 51, 51));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/if_General_Office_65_2530844.png"))); // NOI18N
-        jButton1.setText("START");
+        jButton1.setText("Start");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(360, 390, 120, 40);
+        jButton1.setBounds(590, 430, 150, 40);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/scrumSimulator.jpg"))); // NOI18N
-        jLabel1.setText("jjdjdjd");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/start.jpg"))); // NOI18N
         jLabel1.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jLabel1KeyPressed(evt);
             }
         });
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(0, 0, 920, 561);
+        jLabel1.setBounds(-70, 0, 1500, 750);
 
         setSize(new java.awt.Dimension(894, 603));
         setLocationRelativeTo(null);

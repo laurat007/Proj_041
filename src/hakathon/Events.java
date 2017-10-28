@@ -58,6 +58,9 @@ public class Events {
             HappyFinal hf = new HappyFinal();
             hf.setVisible(true);
         }
+        FinalGameNow fg = new FinalGameNow();
+        fg.setVisible(true);
+        
            
     }
     

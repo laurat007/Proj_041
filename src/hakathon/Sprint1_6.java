@@ -41,49 +41,17 @@ public class Sprint1_6 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
         jCheckBox1 = new javax.swing.JCheckBox();
         jCheckBox2 = new javax.swing.JCheckBox();
         jCheckBox3 = new javax.swing.JCheckBox();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(1500, 750));
+        setMinimumSize(new java.awt.Dimension(1500, 750));
+        setPreferredSize(new java.awt.Dimension(1500, 750));
         getContentPane().setLayout(null);
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/phase.gif"))); // NOI18N
-        getContentPane().add(jLabel1);
-        jLabel1.setBounds(100, 170, 310, 420);
-
-        jLabel7.setFont(new java.awt.Font("Trebuchet MS", 1, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("How do you organize your teams?");
-        getContentPane().add(jLabel7);
-        jLabel7.setBounds(690, 230, 350, 30);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/choice.gif"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(610, 210, 470, 69);
-
-        jLabel4.setFont(new java.awt.Font("Trebuchet MS", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/choice.gif"))); // NOI18N
-        getContentPane().add(jLabel4);
-        jLabel4.setBounds(610, 280, 510, 160);
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/choice.gif"))); // NOI18N
-        getContentPane().add(jLabel5);
-        jLabel5.setBounds(610, 380, 510, 180);
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/choice.gif"))); // NOI18N
-        getContentPane().add(jLabel6);
-        jLabel6.setBounds(610, 540, 510, 100);
 
         jCheckBox1.setText("Choose");
         jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -92,7 +60,7 @@ public class Sprint1_6 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jCheckBox1);
-        jCheckBox1.setBounds(1110, 350, 80, 23);
+        jCheckBox1.setBounds(1140, 300, 80, 23);
 
         jCheckBox2.setText("Choose");
         jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +69,7 @@ public class Sprint1_6 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jCheckBox2);
-        jCheckBox2.setBounds(1110, 460, 80, 23);
+        jCheckBox2.setBounds(1140, 450, 80, 23);
 
         jCheckBox3.setText("Choose");
         jCheckBox3.addActionListener(new java.awt.event.ActionListener() {
@@ -110,7 +78,7 @@ public class Sprint1_6 extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jCheckBox3);
-        jCheckBox3.setBounds(1110, 580, 80, 23);
+        jCheckBox3.setBounds(1140, 590, 80, 23);
 
         jButton1.setText("SUBMIT");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -121,15 +89,12 @@ public class Sprint1_6 extends javax.swing.JFrame {
         getContentPane().add(jButton1);
         jButton1.setBounds(180, 600, 130, 40);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/sprin4.jpg"))); // NOI18N
-        getContentPane().add(jLabel2);
-        jLabel2.setBounds(0, -170, 1888, 1281);
-
-        jLabel8.setText("jLabel8");
-        getContentPane().add(jLabel8);
-        jLabel8.setBounds(820, 360, 34, 14);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pictures/Sprint1_retrospective.jpg"))); // NOI18N
+        getContentPane().add(jLabel9);
+        jLabel9.setBounds(-20, -30, 1520, 810);
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -203,13 +168,6 @@ public class Sprint1_6 extends javax.swing.JFrame {
     private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JCheckBox jCheckBox2;
     private javax.swing.JCheckBox jCheckBox3;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
 }
